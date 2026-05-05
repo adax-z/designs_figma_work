@@ -1,0 +1,29 @@
+/* DESIGN VARIABLES */
+:root {
+    --primary-blue: #4338ca; /* Example: Match from Figma */
+    --accent-yellow: #ffc107;
+    --text-dark: #06091f;
+    --bg-light: #f3f4f6;
+    --font-main: 'Inter', sans-serif; /* Check Figma for actual font */
+}
+
+body {
+    font-family: var(--font-main);
+    color: var(--text-dark);
+}
+
+/* CUSTOM BUTTONS */
+.btn-primary-custom {
+    background-color: var(--accent-yellow);
+    border: none;
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-weight: 600;
+}
+
+.btn-outline-custom {
+    border: 2px solid var(--text-dark);
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-weight: 600;
+}
