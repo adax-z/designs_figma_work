@@ -16,6 +16,7 @@ body {
     overflow-x: hidden; /* Prevents horizontal scroll on full-width banners */
 }
 
+
 /* 2. REUSABLE UI ELEMENTS */
 .btn-yellow, .btn-yellow-custom, .btn-yellow-main {
     background-color: var(--certo-yellow);
@@ -36,17 +37,10 @@ body {
     border: none;
 }
 
-/* .btn-outline-light {
+.btn-outline-light {
     border-width: 2px;
     font-weight: bold;
     transition: all 0.3s ease;
-} */
-
-.btn-outline-light {
-    border: 3px solid #ffffff !important; /* make border bold */
-    color: #ffffff !important;
-    background-color: transparent !important;
-    font-weight: bold;
 }
 
 /* 3. HERO & FRAMES */
@@ -86,8 +80,12 @@ body {
 }
 
 /* 5. STORY & HELP CARDS */
-.story-card { background-color: var(--certo-yellow); }
+/* .story-card { background-color: var(--certo-yellow); } */
 
+.story-card {
+  background: linear-gradient(135deg, #ffcc66, #ff9f1a);
+  color: #000000;
+}
 .card-title-main {
     font-size: 1.8rem;
     font-weight: bold;
