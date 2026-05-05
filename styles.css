@@ -1,70 +1,58 @@
-/* DESIGN VARIABLES */
+/* style.css */
 :root {
-    --primary-blue: #4338ca; /* Example: Match from Figma */
-    --accent-yellow: #ffc107;
-    --text-dark: #06091f;
-    --bg-light: #f3f4f6;
-    --font-main: 'Inter', sans-serif; /* Check Figma for actual font */
+    --certo-blue: #02033b;
+    --certo-yellow: #ffc247;
+    --btn-blue: #4338ca;
+    --bg-light-blue: #f3f7ff;
 }
 
 body {
-    font-family: var(--font-main);
-    color: var(--text-dark);
+    font-family: 'Inter', sans-serif; /* Standard Certo Font */
+    color: var(--certo-blue);
 }
 
-/* CUSTOM BUTTONS */
-.btn-primary-custom {
-    background-color: var(--accent-yellow);
+/* Custom UI Elements */
+.btn-yellow {
+    background-color: var(--certo-yellow);
     border: none;
-    padding: 12px 30px;
-    border-radius: 50px;
-    font-weight: 600;
+    color: var(--certo-blue);
 }
 
-.btn-outline-custom {
-    border: 2px solid var(--text-dark);
-    padding: 12px 30px;
-    border-radius: 50px;
-    font-weight: 600;
+.btn-dark-blue {
+    background-color: var(--btn-blue);
+    color: white;
 }
 
-/* HERO SECTION STYLES */
-.hero-section {
-    padding-top: 123px; /* Matches Figma 'top: 123.38px' */
-    padding-bottom: 80px;
-    background-image: url('../images/image_0ffb9c.jpg'); /* Background texture */
+.hero {
+    background: url('../images/image_0ffb9c.jpg') no-repeat center center;
     background-size: cover;
-    min-height: 461px; /* Matches Figma 'height: 461.25' */
+    min-height: 500px;
 }
 
-.hero-text-box {
-    padding-right: 50px; /* Adjusted for web responsiveness instead of 196px */
-    display: flex;
-    flex-direction: column;
-    gap: 15px; /* Matches Figma 'gap: 15px' */
-}
-
-.hero-title {
-    font-size: 3.5rem; /* Verify exact px in Figma Typography section */
-    font-weight: 800;
-    line-height: 1.1;
-    color: var(--text-dark);
-}
-
-.hero-subtitle {
-    font-size: 1.2rem;
-    color: #4a4a4a;
-    max-width: 450px; /* Prevents text from stretching too wide */
-}
-
-/* RESPONSIVE ADJUSTMENTS */
+/* Responsive Overrides */
 @media (max-width: 768px) {
-    .hero-section {
-        padding-top: 50px;
-        text-align: center;
-    }
-    .hero-text-box {
-        padding-right: 0;
-        margin-bottom: 40px;
-    }
+    .display-3 { font-size: 2.5rem; }
+    .hero { text-align: center; }
+    .hero .d-flex { justify-content: center; flex-direction: column; }
 }
+
+@media (max-width: 360px) {
+    .container { padding-left: 15px; padding-right: 15px; }
+}
+
+.image-frame-container {
+    padding: 20px;
+}
+
+.yellow-frame {
+    position: absolute;
+    top: 40px;
+    right: 0;
+    width: 90%;
+    height: 90%;
+    background-color: var(--certo-yellow);
+    border-radius: 20px;
+    z-index: 0;
+}
+
+.z-1 { z-index: 1; }

@@ -1,73 +1,170 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Certo Software Clone | VP Assignment 3</title>
+    <title>Certo Software Clone</title>
     <!-- Bootstrap 5 CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 
-    <!-- NAVBAR START -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
-        <div class="container">
-            <a class="navbar-brand" href="#">
-                <!-- <img src="assets/images/logo.svg" alt="Certo Logo" width="157">  -->
-          <svg width="157" height="54" viewBox="0 0 157 54" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g clip-path="url(#clip0_30_8638)">
-<path d="M31.484 33.9808C30.9294 33.7119 30.2929 33.6654 29.7051 33.8508C29.1172 34.0362 28.6226 34.4396 28.3227 34.9781C28.0834 35.367 27.844 35.746 27.5947 36.115C27.167 36.7557 26.7077 37.3748 26.2185 37.9699C25.6954 38.6032 25.0389 39.113 24.2958 39.463C23.5528 39.8131 22.7416 39.9946 21.9202 39.9946C21.0989 39.9946 20.2877 39.8131 19.5446 39.463C18.8016 39.113 18.1451 38.6032 17.622 37.9699C17.1433 37.3715 16.6846 36.7432 16.2458 36.095C14.0037 32.644 12.4557 28.7892 11.6883 24.7461C11.233 22.5304 10.9463 20.2835 10.8306 18.0245C10.7545 16.5746 11.1961 15.1449 12.0766 13.9904C12.957 12.8359 14.2191 12.0319 15.6374 11.7218H15.7172C17.7694 11.2894 19.8485 10.9962 21.9402 10.8442C24.0316 10.9934 26.1107 11.2832 28.1631 11.7118H28.2329C29.6494 12.0263 30.9082 12.8335 31.7849 13.9897C32.6616 15.1458 33.0992 16.5757 33.0198 18.0245C33.0198 18.4633 33.0198 18.9121 32.9301 19.3808C32.9 19.6995 32.9336 20.021 33.029 20.3266C33.1244 20.6322 33.2796 20.9158 33.4857 21.1608C33.6917 21.4059 33.9445 21.6074 34.2292 21.7538C34.5139 21.9002 34.8249 21.9885 35.144 22.0136L41.0478 22.4823C41.365 22.5096 41.6844 22.4739 41.9877 22.3772C42.291 22.2806 42.5722 22.1249 42.815 21.9191C43.0579 21.7133 43.2576 21.4615 43.4028 21.1782C43.5479 20.8949 43.6356 20.5857 43.6607 20.2684C43.9416 16.7958 43.9182 13.3054 43.5909 9.83693C43.5093 9.0241 43.2661 8.23577 42.8756 7.51822C42.4852 6.80066 41.9553 6.16834 41.3171 5.65837C35.7723 1.28036 25.67 0.30304 22.738 0.0736679C22.1969 0.0337937 21.6536 0.0337937 21.1125 0.0736679C18.1905 0.30304 8.07815 1.28036 2.53334 5.6484C1.8949 6.15734 1.36544 6.78959 0.976516 7.50747C0.587591 8.22535 0.347155 9.01418 0.269537 9.82695C-0.458469 17.1868 -1.12664 41.3107 19.1578 53.1782C19.9979 53.6679 20.9528 53.926 21.9252 53.926C22.8976 53.926 23.8526 53.6679 24.6926 53.1782C30.1506 50.0206 34.6832 45.4846 37.8366 40.0243C38.1594 39.4672 38.2483 38.805 38.0838 38.1825C37.9193 37.5601 37.5149 37.0282 36.959 36.7033L36.8095 36.6236L31.484 33.9808Z" fill="#FFC247"/>
-<path d="M95.8877 44.532C89.7943 44.532 85.4263 40.2438 85.4263 33.8413C85.3824 32.4893 85.6058 31.1419 86.0835 29.8763C86.5613 28.6107 87.2841 27.4519 88.2105 26.4662C89.137 25.4804 90.2488 24.6872 91.4823 24.132C92.7159 23.5767 94.0468 23.2703 95.399 23.2303H96.0572C102.539 23.2303 106.16 27.8976 106.16 34.3499C106.16 34.5793 106.16 35.048 106.16 35.5466H91.2005C91.3263 36.727 91.8854 37.8188 92.7696 38.6109C93.6538 39.403 94.8003 39.8391 95.9874 39.8349C96.7392 39.8984 97.4945 39.7644 98.1785 39.446C98.8624 39.1276 99.4513 38.636 99.8867 38.0198H105.87C104.634 41.7995 101.083 44.542 95.9475 44.542M100.495 31.8467C100.431 30.6995 99.9262 29.6214 99.0863 28.8373C98.2465 28.0532 97.1363 27.6236 95.9874 27.6383C94.8077 27.614 93.6618 28.0326 92.7756 28.8117C91.8895 29.5908 91.3275 30.6737 91.2005 31.8467H100.495Z" fill="#02033B"/>
-<path d="M113.809 27.0499C114.966 24.5866 117.279 23.6193 119.902 23.5395V29.1342C118.846 29.085 117.79 29.2028 116.771 29.4832C115.345 29.942 113.998 30.9093 113.998 35.1577V43.8439H108.015V23.8985H113.799L113.809 27.0499Z" fill="#02033B"/>
-<path d="M133.285 39.1068H134.481L136.536 43.814H131.639C125.975 43.9336 124.818 40.5329 124.818 35.9056V29.1441H121.457V24.0082H124.818V19.5205L130.642 16.9376V24.0082H134.731V29.184H130.642V34.9383C130.642 37.6409 130.752 39.1368 133.265 39.1368" fill="#02033B"/>
-<path d="M135.549 33.8413C135.549 27.0499 140.635 23.2702 146.309 23.2702C151.984 23.2702 157 27.0499 157 33.8413C157 40.6327 151.944 44.4921 146.309 44.4921C140.675 44.4921 135.549 40.6725 135.549 33.8413ZM146.309 39.8249C149.361 39.8249 151.296 37.1223 151.296 33.8413C151.296 30.5602 149.371 27.8576 146.309 27.8576C143.248 27.8576 141.323 30.5602 141.323 33.8413C141.323 37.1223 143.258 39.8249 146.309 39.8249Z" fill="#02033B"/>
-<path d="M70.9461 44.532C63.0378 44.532 56.9844 39.0869 56.9844 30.291C57.0143 21.6546 63.1076 16.03 71.0558 16.03C77.9569 16.03 82.4746 19.4207 84.2098 25.524H78.1165C76.7303 22.4325 74.1274 21.2757 71.0558 21.2757C66.6978 21.2757 63.1874 24.9057 63.1874 30.3408C63.1874 35.7759 66.7377 39.3162 71.0558 39.3162C74.8754 39.3162 76.9597 37.8503 78.0367 35.1178H84.0901C82.5543 41.2111 77.6478 44.5619 70.8963 44.5619" fill="#02033B"/>
-</g>
-<defs>
-<clipPath id="clip0_30_8638">
-<rect width="157" height="53.8525" fill="white" transform="translate(0 0.0737305)"/>
-</clipPath>
-</defs>
-</svg>
-
-            </a>
-            <!-- We will add nav items in Step 2 -->
-        </div>
-    </nav>
-    <!-- NAVBAR END -->
-
-    <main>
-   
-<!-- HERO SECTION START -->
-<section class="hero-section">
-    <div class="container hero-container">
-        <div class="row align-items-center">
-            <!-- Text Content (Col-lg-6 for Desktop) -->
-            <div class="col-lg-6 hero-text-box">
-                <h1 class="hero-title">Your mobile privacy is our mission</h1>
-                <p class="hero-subtitle">
-                    Think your phone has been hacked? Our trusted apps make it 
-                    easy for you to scan, detect and remove threats from your 
-                    iPhone and Android devices.
-                </p>
-                <div class="hero-btns">
-                    <!-- image_0f96c3.png can be used for the iPhone button icon -->
-                    <a href="#" class="btn btn-primary-custom">Get Certo for iPhone &rarr;</a>
-                    <a href="#" class="btn btn-outline-custom">Get Certo for Android</a>
+    <header>
+        <!-- Use the logo "image_0f96a3.png" here -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom">
+            <div class="container">
+                <a class="navbar-brand" href="#"><img src="assets/images/image_0f96a3.png" alt="Certo" width="157"></a>
+                <div class="collapse navbar-collapse justify-content-end">
+                    <ul class="navbar-nav gap-4 align-items-center">
+                        <li class="nav-item"><a class="nav-link fw-bold" href="#">iPhone</a></li>
+                        <li class="nav-item"><a class="nav-link fw-bold" href="#">Android</a></li>
+                        <li class="nav-item"><a class="nav-link fw-bold" href="#">Help</a></li>
+                        <li class="nav-item"><a class="nav-link fw-bold" href="#">Company</a></li>
+                        <li><a href="#" class="btn btn-dark-blue rounded-pill px-4">Sign in</a></li>
+                    </ul>
                 </div>
             </div>
-            <!-- Image Content -->
-            <div class="col-lg-6 text-end">
-                <!-- Use image_0ffb9c.jpg for the background and image_0f965e.png for the phone dashboard -->
-                <img src="assets/images/image_0f965e.png" class="img-fluid hero-image" alt="Certo Dashboard">
+        </nav>
+    </header>
+
+    <main>
+        <!-- SECTION 1: HERO (image_0ffb9c.jpg background) -->
+        <section class="hero py-5">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <h1 class="display-3 fw-bold">Your mobile privacy is our mission</h1>
+                        <p class="lead my-4">Think your phone has been hacked? Our trusted apps make it easy...</p>
+                        <div class="d-flex gap-3">
+                            <a href="#" class="btn btn-yellow rounded-pill px-4 py-2 fw-bold">Get Certo for iPhone &rarr;</a>
+                            <a href="#" class="btn btn-outline-dark rounded-pill px-4 py-2 fw-bold">Get Certo for Android</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 text-center">
+                        <!-- Dashboard image: image_0f965e.png -->
+                        <img src="assets/images/image_0f965e.png" class="img-fluid" alt="Dashboard">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2: TESTIMONIALS (Yellow Section) -->
+        <section class="testimonials py-5" style="background-color: #ffc247;">
+            <div class="container text-center">
+                <h2 class="fw-bold mb-5">Loved by thousands of iPhone and Android users alike</h2>
+                <div class="row g-4 mb-5">
+                    <!-- Repeat this card for each testimonial in image_0f973b.png -->
+                    <div class="col-md-4">
+                        <div class="card border-0 rounded-4 p-4 text-start h-100 shadow-sm">
+                            <div class="stars mb-2">★★★★★</div>
+                            <p class="small">"Does exactly what it says. Clear to read and understand..."</p>
+                            <p class="fw-bold mt-auto mb-0">colinandmandy94</p>
+                        </div>
+                    </div>
+                    <!-- Add more cards -->
+                </div>
+                <div class="featured-in d-flex justify-content-center align-items-center gap-5 opacity-75">
+                    <span class="fw-bold">Featured in:</span>
+                    <!-- Export logos from Figma as SVGs -->
+                    <img src="assets/images/cnbc.svg" alt="CNBC" height="30">
+                    <img src="assets/images/nypost.svg" alt="NYP" height="25">
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: FEATURES (Grid of 6 items) -->
+        <section class="features py-5 bg-light">
+            <div class="container bg-white rounded-5 p-5 shadow-sm">
+                <h2 class="text-center fw-bold mb-5">Get your freedom back, stop mobile spyware today</h2>
+                <div class="row g-5">
+                    <!-- Example feature - repeat 6 times as per Figma -->
+                    <div class="col-md-4 text-center">
+                        <img src="assets/images/spyware-icon.svg" alt="" class="mb-3" width="50">
+                        <h5 class="fw-bold">Spyware detection</h5>
+                        <p class="text-muted small">Our advanced spyware detection engine can identify...</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+<!-- ABOUT SECTION START -->
+<section class="about-section py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <!-- Left Text Content -->
+            <div class="col-lg-6 mb-4 mb-lg-0">
+                <h2 class="fw-bold mb-4" style="font-size: 2.5rem; max-width: 450px;">
+                    At Certo, mobile security is not an afterthought, it’s what we do.
+                </h2>
+                <p class="text-muted mb-5" style="max-width: 500px;">
+                    With years of experience in mobile security and spyware detection, 
+                    our products have helped countless people safeguard their devices 
+                    and find peace of mind.
+                </p>
+                <div class="d-flex flex-column flex-sm-row gap-3">
+                    <a href="#" class="btn btn-yellow rounded-pill px-4 py-2 fw-bold text-dark">Get Certo for iPhone &rarr;</a>
+                    <a href="#" class="btn btn-outline-dark rounded-pill px-4 py-2 fw-bold">Get Certo for Android</a>
+                </div>
+            </div>
+            
+            <!-- Right Image with Yellow Frame -->
+            <div class="col-lg-6">
+                <div class="image-frame-container position-relative">
+                    <!-- Export this photo from Figma as a PNG -->
+                    <img src="assets/images/about-person.png" class="img-fluid rounded-4 position-relative z-1" alt="Person using phone">
+                    <div class="yellow-frame"></div>
+                </div>
             </div>
         </div>
     </div>
 </section>
-<!-- HERO SECTION END -->
+<!-- ABOUT SECTION END -->
 
+<!-- FEATURES GRID START -->
+<section class="features-grid-section py-5" style="background-color: var(--bg-light-blue);">
+    <div class="container text-center">
+        <h2 class="fw-bold mb-5 mt-4">Get your freedom back, stop mobile spyware today</h2>
+        
+        <div class="features-white-card bg-white rounded-5 p-5 shadow-sm">
+            <div class="row g-5">
+                <!-- Feature 1 -->
+                <div class="col-md-4">
+                    <div class="feature-item">
+                        <img src="assets/images/spyware-icon.svg" alt="Spyware" class="mb-3" width="60">
+                        <h5 class="fw-bold">Spyware detection</h5>
+                        <p class="small text-muted">Our advanced spyware detection engine can identify if a device contains spyware or bugging software.</p>
+                    </div>
+                </div>
+                <!-- Feature 2 -->
+                <div class="col-md-4">
+                    <div class="feature-item">
+                        <img src="assets/images/keylogger-icon.svg" alt="Keylogger" class="mb-3" width="60">
+                        <h5 class="fw-bold">Keylogger detection</h5>
+                        <p class="small text-muted">Find malicious keyboards installed on your device that could allow someone to record things you type.</p>
+                    </div>
+                </div>
+                <!-- Feature 3 -->
+                <div class="col-md-4">
+                    <div class="feature-item">
+                        <img src="assets/images/tracking-icon.svg" alt="Tracking" class="mb-3" width="60">
+                        <h5 class="fw-bold">Find tracking apps</h5>
+                        <p class="small text-muted">Check which apps can access your location, microphone or camera. Get alerted if a known tracking app is installed.</p>
+                    </div>
+                </div>
+                <!-- Row 2: Add 3 more feature items here following the same pattern -->
+            </div>
+
+            <!-- Buttons inside the card -->
+            <div class="d-flex justify-content-center gap-3 mt-5 pb-3">
+                <a href="#" class="btn btn-yellow rounded-pill px-4 py-2 fw-bold text-dark">Get Certo for iPhone &rarr;</a>
+                <a href="#" class="btn btn-outline-dark rounded-pill px-4 py-2 fw-bold">Get Certo for Android</a>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- FEATURES GRID END -->
 
     </main>
 
