@@ -1,47 +1,59 @@
-/* style.css */
+/* 1. GLOBAL VARIABLES & RESET */
+
 :root {
     --certo-blue: #02033b;
     --certo-yellow: #ffc247;
     --btn-blue: #4338ca;
+    --vibrant-blue: #3b2dd0; 
     --bg-light-blue: #f3f7ff;
+    --text-gray: #4b5563;
 }
 
 body {
-    font-family: 'Inter', sans-serif; /* Standard Certo Font */
+    font-family: 'Inter', sans-serif;
     color: var(--certo-blue);
+    margin: 0;
+    overflow-x: hidden; /* Prevents horizontal scroll on full-width banners */
 }
 
-/* Custom UI Elements */
-.btn-yellow {
+/* 2. REUSABLE UI ELEMENTS */
+.btn-yellow, .btn-yellow-custom, .btn-yellow-main {
     background-color: var(--certo-yellow);
     border: none;
-    color: var(--certo-blue);
+    color: var(--certo-blue) !important;
+    font-weight: bold;
+    transition: all 0.3s ease;
 }
 
-.btn-dark-blue {
+.btn-yellow:hover, .btn-yellow-custom:hover, .btn-yellow-main:hover {
+    background-color: #fdb125;
+    transform: translateY(-2px);
+}
+
+.btn-blue-custom, .btn-dark-blue {
     background-color: var(--btn-blue);
-    color: white;
+    color: white !important;
+    border: none;
 }
 
+/* .btn-outline-light {
+    border-width: 2px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+} */
+
+.btn-outline-light {
+    border: 3px solid #ffffff !important; /* make border bold */
+    color: #ffffff !important;
+    background-color: transparent !important;
+    font-weight: bold;
+}
+
+/* 3. HERO & FRAMES */
 .hero {
     background: url('../images/image_0ffb9c.jpg') no-repeat center center;
     background-size: cover;
     min-height: 500px;
-}
-
-/* Responsive Overrides */
-@media (max-width: 768px) {
-    .display-3 { font-size: 2.5rem; }
-    .hero { text-align: center; }
-    .hero .d-flex { justify-content: center; flex-direction: column; }
-}
-
-@media (max-width: 360px) {
-    .container { padding-left: 15px; padding-right: 15px; }
-}
-
-.image-frame-container {
-    padding: 20px;
 }
 
 .yellow-frame {
@@ -55,4 +67,115 @@ body {
     z-index: 0;
 }
 
-.z-1 { z-index: 1; }
+/* 4. FEATURES SECTION (White Card) */
+.feature-card-wrapper {
+    border-radius: 45px;
+    max-width: 1000px;
+    background-color: white;
+}
+
+.feature-icon {
+    height: 60px;
+    width: auto;
+}
+
+.feature-desc {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--text-gray);
+}
+
+/* 5. STORY & HELP CARDS */
+.story-card { background-color: var(--certo-yellow); }
+
+.card-title-main {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+/* 6. SPYING BANNER (Full Width Blue - Fix for image_026b3c.png) */
+/* Fix for image_026b3c.png */
+/* Change this name to match your HTML class */
+/* .spying-banner-full {
+    
+    background-color: #3b2dd0 !important;     
+    border-top: 10px solid #ff00ff; 
+    width: 100%;
+    position: relative;
+    padding: 100px 0;
+    margin-top: 0;
+    margin-bottom: 0;
+} */
+
+.spying-banner {
+    background-color: #3b2dd0;
+    border-top: 10px solid #ff00ff;
+    width: 100%;
+    padding: 100px 0;
+}
+
+/* Update this too so the text becomes white */
+.spying-banner h2 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: rgb(230, 230, 236) !important; 
+}
+
+/* Fix for the yellow button specifically in this section */
+.btn-yellow-main {
+    background-color: #ffc247 !important;
+    color: #02033b !important;
+}
+
+.btn-yellow-main:hover {
+    background-color: #fdb125 !important;
+}
+
+/* Ensure responsiveness for small screens */
+@media (max-width: 768px) {
+    .spying-banner-full {
+        padding: 60px 0;
+    }
+    .spying-banner-full h2 {
+        font-size: 2.2rem;
+    }
+}
+
+/* 7. LATEST INSIGHTS */
+.insight-card .card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+/* 8. FOOTER & NEWSLETTER */
+.footer { background-color: var(--certo-blue); }
+
+.newsletter-card {
+    background-color: var(--certo-yellow);
+    border-radius: 30px;
+}
+
+.newsletter-form input:focus {
+    box-shadow: none;
+    outline: none;
+}
+
+/* 9. CONSOLIDATED RESPONSIVE OVERRIDES */
+@media (max-width: 992px) {
+    .footer { text-align: center; }
+    .newsletter-form { flex-direction: column; }
+    .newsletter-form input { border-radius: 50px !important; margin-bottom: 10px; }
+}
+
+@media (max-width: 768px) {
+    .spying-banner-full h2 { font-size: 2.2rem; }
+    .section-title-large { font-size: 2rem; }
+    .feature-card-wrapper { border-radius: 30px; }
+    .hero { text-align: center; }
+    .display-3 { font-size: 2.5rem; }
+}
+
+@media (max-width: 360px) {
+    .container { padding-left: 15px; padding-right: 15px; }
+    .insight-card .card-body { padding: 1rem; }
+}
